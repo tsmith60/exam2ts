@@ -148,7 +148,10 @@ public class Creature {
 				return;
 			}
 		}
-		
+		//Handle the successfull movement and check for battle
+		moveSuccess(mx, my, mz, tile);
+	}
+	private void moveSuccess(int mx, int my, int mz, Tile tile) {
 		Creature other = world.creature(x+mx, y+my, z+mz);
 		
 		modifyFood(-1);
